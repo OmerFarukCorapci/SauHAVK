@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaüHAVK Kulübü</title>
+    <style>
+        /* Genel Ayarlar */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* Hero Bölümü */
+        .hero {
+            background-image: url('file:///C:/Users/MSİ/Desktop/Screenshot_2.png');
+            background-size: cover;
+            background-position: center;
+            color: rgb(255, 255, 255);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Menü */
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Bölümler */
+        .section {
+            padding: 2rem;
+            background-color: white;
+            margin: 1rem auto;
+            max-width: 1200px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hizmetler Kartları */
+        .services {
+            display: flex;
+            gap: 1rem;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            flex: 1;
+            max-width: 45%;
+            background-color: #6f7e71;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            color: #bb11ca;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+        /* Galeri */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* İletişim Formu */
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            padding: 0.75rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .contact-form button {
+            padding: 0.75rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>SaüHAVK Kulübü</h1>
+        <p>Havacılık ve Modelcilik Kulübü</p>
+        <nav>
+            <a href="#about">Hakkımızda</a>
+            <a href="#services">Hizmetlerimiz</a>
+            <a href="#gallery">Galeri</a>
+            <a href="#contact">İletişim</a>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+        <h2>Hakkımızda</h2>
+        <p>SaüHAVK, Sakarya Üniversitesi'nde havacılığa ve modelciliğe ilgi duyan öğrencilere yönelik bir kulüptür.</p>
+    </section>
+
+    <section id="services" class="section services">
+        <h2>Hizmetlerimiz</h2>
+        <div class="service-card">
+            <h3>Drone Yarışları</h3>
+            <p>Drone yarışlarına katılım sağlayarak tecrübe kazanıyoruz.</p>
+        </div>
+        <div class="service-card">
+            <h3>Model Uçak Yapımı</h3>
+            <p>Model uçak yapımı üzerine atölyeler düzenliyoruz.</p>
+        </div>
+    </section>
+
+    <section id="gallery" class="section gallery">
+        <h2>Galeri</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG5-k9G8FUOfbKY2xh8EVqsly9ghyOPqgURA&s" alt="Roket 1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMRUCq6Sa22k7BwpV8PAUPcwV4REqKyIiPhA&s" alt="Yamaç Paraşütü">
+    </section>
+
+    <section id="contact" class="section contact-form">
+        <h2>İletişim</h2>
+        <form>
+            <label for="name">Ad Soyad:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" required>
+            <label for="message">Mesajınız:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit">Gönder</button>
+        </form>
+    </section>
+</body>
+</html>
